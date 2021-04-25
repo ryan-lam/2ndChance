@@ -1,8 +1,5 @@
-# 2ndChance
-Hack Brooklyn 2021
-
 ## Inspiration
-We took the idea of this project from LinkedIn where users can browse for jobs online and view their profile and personal information. However, instead of normal users, the target audience here are prisoners.
+Prisoners and individuals with a criminal background are very isolated from society. Our project aims to help provide a 2nd chance to these individuals by providing them an exclusive CS-related opportunity so they can enter society (after their prison time) and contribute to society. Our project also improves the diversity of workplaces since the individuals would have a non-conventional path.
 
 ## What it does
 2ndChance connects prisoners to job posts to look for jobs. Their accounts can be monitored by prison administrators where they have full control over prisoner's information and whether they can have an account or not. 
@@ -16,7 +13,12 @@ We built this program by using Flask framework for backend and Bootstrap, HTML, 
 We ran into many challenges along the way such as adding prisoner information from the admin's dashboard and updating the information on the prisoner's profile. This all stemmed from the challenge of passing data from Flask to HTML and vice versa.
 
 ## Accomplishments that we're proud of
-Being able to fully 
+- Having a working database where you can add/remove things
+- Getting the project done
+
 ## What we learned
+- Passing info between the frontend and backend
+- Using the passed info to make changes in the database/backend
 
 ## What's next for 2ndChance
+- Build a function to allow for job posters to add their jobs

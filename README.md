@@ -1,3 +1,5 @@
+## 2ndChance - Hack Brooklyn 2021
+
 ## Inspiration
 Prisoners and individuals with a criminal background are very isolated from society. Our project aims to help provide a 2nd chance to these individuals by providing them an exclusive CS-related opportunity so they can enter society (after their prison time) and contribute to society. Our project also improves the diversity of workplaces since the individuals would have a non-conventional path.
 

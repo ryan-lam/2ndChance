@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <title>Job Description</title>
+    </head>
+    <body >
+        <nav class="navbar navbar-light bg-dark">
+            <div class="container-fluid">
+                <h1 style="margin-left: 20px;"><a href="/" class="text-white" style="text-decoration: none;">Job Description</a></h1>
+                <div class="float-md-end me-5">
+                    <a style="text-decoration: none; margin-right: 10px;" href="/joblist"><button class="btn btn-outline-light topcustom" style="width: 100px;">Jobs</button></a> 
+                    <a style="text-decoration: none" href="/"><button class="btn btn-outline-light topcustom" style="width: 100px;">Sign Out</button></a> 
+                </div>
+            </div>
+        </nav>
+        <div style="display: flex; flex-direction: row; justify-content: flex-start; margin-top: 30px; ">
+            <img src="../static/images/{{ job[1] }}.png" style="width: 100px; margin-left: 100px;">
+            <div style="display: inline; margin-left: 20px;">
+                <h1>{{  job[1]  }} - {{  job[0]  }}</h1>
+                <p style="font-size: 20px; margin-top: -10px;">Date Posted: {{ job[2] }}</p>
+            </div>
+            <p style="margin-right: 10px; text-align: center; margin-left: auto; font-size: 20px; margin-right: 100px; align-self: flex-end; justify-self: end;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-building" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694 1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z"/>
+                <path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z"/>
+              </svg><b style="margin-left: 10px;">{{ job[4] }}</b>
+            </p>
+        </div>
+        <hr/>
+        
+        <p style="width: 75%; margin: auto; margin-top: 40px;">{{ job[3] }}</p>
+
+        <b style="font-size: 25px; margin-top: 50px; margin-left: 12.5%; display: block;">RESPONSIBILITIES:</b>
+        <ul style="display: block; margin-top: 10px; margin-left: 12.5%; width: 75%;">
+            <li>{{ job[6][0] }}</li>
+            <li>{{ job[6][1] }}</li>
+            <li>{{ job[6][2] }}</li>
+            <li>{{ job[6][3] }}</li>
+        </ul>
+
+        
+    
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+        <title>Criminal Profile</title>
+        <style>
+            .card{
+                width: 1000px; 
+                height: 500px; 
+                background-color:rgb(255, 246, 214); 
+                margin:auto; 
+                margin-top: calc((100vh - 570px) / 2); 
+                display: flex; 
+                flex-direction: row;
+                border-radius: 30px;
+                border-color:rgb(15, 15, 15);
+                border-width: 5px;
+            }
+        </style>
+    </head>
+    <body >
+        <nav class="navbar navbar-light bg-dark">
+            <div class="container-fluid">
+                <h1 style="margin-left: 20px;"><a class="text-white" style="text-decoration: none;">My Profile</a></h1>
+                <div class="float-md-end me-5">
+                    <a style="text-decoration: none; margin-right: 10px;" href="/joblist"><button class="btn btn-outline-light topcustom" style="width: 100px;">Jobs</button></a> 
+                    <a style="text-decoration: none" href="/"><button class="btn btn-outline-light topcustom" style="width: 100px;">Sign Out</button></a> 
+                </div>
+
+            </div>
+        </nav>
+
+        
+        
+        <div class="card">
+            <img src="../static/images/{{ db[criminal][4] }}.jpeg" style="width: 200px; height: 200px; margin-top: 20px; margin-left: 20px;">
+            <div style="margin-left: 25px; flex: 2;">
+                <p style="margin-top: 20px; font-size: 20px;">ID: {{  db[criminal][5]  }}</p>
+                <h2 style="font-size: 50px;">{{  db[criminal][1]  }}</h2>
+                <p style="font-size: 30px; display: inline;">Date of Birth: {{  db[criminal][2]  }}</p>
+                <p style="font-size: 30px; display: inline; margin-left: 30px;">Age: {{  db[criminal][3]  }}</p>
+                <p style="font-size: 30px; margin-top: -5px;">Gender: {{  db[criminal][4]  }}</p>
+                <p style="font-size: 30px; margin-top: -20px;">Criminal Status: {{  db[criminal][6]  }}</p>
+                <p style="font-size: 30px; margin-top: -20px;">Prison Complex: {{  db[criminal][7]  }}</p>
+            </div>
+
+            
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    </body>
+</html>

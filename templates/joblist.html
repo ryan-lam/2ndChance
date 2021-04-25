@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+        <title>Criminal Jobs</title>
+        <style>
+            .jobNode{
+                border-radius: 20px;
+                width: 60%; 
+                margin: auto; 
+                background-color:rgb(255, 246, 214); 
+                height:fit-content; 
+                display: flex; 
+                justify-content: flex-start; 
+                margin-top: 20px;
+            }
+
+            .jobNode img{
+                width: 80px; 
+                margin-top: 20px; 
+                margin-left: 20px; 
+                order: 1; 
+                height: 80px; 
+                display: block; 
+            }
+        </style>
+    </head>
+    <body >
+        <nav class="navbar navbar-light bg-dark">
+            <div class="container-fluid">
+                <h1 style="margin-left: 20px;"><a href="/" class="text-white" style="text-decoration: none;">Available Opportunities</a></h1>
+                <div class="float-md-end me-5">
+                    <a style="text-decoration: none; margin-right: 10px;" href="/profile"><button class="btn btn-outline-light topcustom" style="width: 100px;">Profile</button></a> 
+                    <a style="text-decoration: none" href="/"><button class="btn btn-outline-light topcustom" style="width: 100px;">Sign Out</button></a> 
+                </div>
+            </div>
+            
+        </nav>
+        {%  for i in range(job_db_len)  %}
+        <form class="jobNode" method="POST" id="signup-form" class="signup-form" action="/jobdescription">
+            <img src="../static/images/{{ job_db[i][1] }}.png">
+            <div style="order: 2; margin-left: 40px; margin-top: 10px; flex: 5;">
+                <h3 style="display: inline; ">{{ job_db[i][0] }} - {{ job_db[i][1] }}</h3>
+                <p>Date Posted: {{ job_db[i][2] }}</p>
+                <p style="margin-bottom: 10px;">{{ job_db[i][5] }}</p>
+            </div>
+            <button type="submit" class="btn btn-outline-success topcustom" name="content" style="height:40px; order: 3; display: block; flex: 1; margin-bottom: 10px; width: 200px; margin-right: 20px; align-self: flex-end;" value="{{ i }}">Apply</button>
+        </form>
+        {% endfor %}
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    </body>
+</html>
